@@ -8,5 +8,8 @@
   },
   "keywords": [],
   "author": "Cristina Pineda",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "graphql-yoga": "^2.10.0"
+  }
 }
