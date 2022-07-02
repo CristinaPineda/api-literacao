@@ -1,4 +1,4 @@
-import mongoose from '../database/connection.js';
+const mongoose = require('../database/connection.js');
 
 const schemaProject = new mongoose.Schema({
   tipo: {
@@ -13,9 +13,14 @@ const schemaProject = new mongoose.Schema({
     type: String,
     required: true,
   },
-  dicas: [ String ]
+  imagem: {
+    type: String,
+    required: true,
+  },
+  dicas: [ String ],
+  required: true,
 });
 
 const projectsCards = mongoose.model('ProjectCard', schemaProject);
 
-export default projectsCards;
+module.exports = projectsCards;

@@ -1,0 +1,17 @@
+type Question {
+  id: ID!
+  tipo: String
+  resposta: String!
+  regiao: String!
+  imagem: String!
+  dicas: [String!]
+}
+
+type Query {
+  questions: [Question!]!
+  question(id: ID!): Question
+}
+
+type Mutation {
+  createQuestion(tipo: String, resposta: String!, regiao: String!, imagem: String!, dicas: [String!]): Question
+}
