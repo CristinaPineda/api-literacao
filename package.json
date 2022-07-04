@@ -4,12 +4,19 @@
   "description": "servidor-projeto-literacao",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon -e js,graphql src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Cristina Pineda",
   "license": "ISC",
   "dependencies": {
-    "graphql-yoga": "^2.10.0"
+    "@graphql-yoga/node": "^2.11.2",
+    "dotenv": "^16.0.1",
+    "graphql": "^16.5.0",
+    "graphql-yoga": "^2.11.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
   }
 }
