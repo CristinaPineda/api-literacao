@@ -1,10 +1,16 @@
-const { GraphQLServer } = require('graphql-yoga');
-const path = require('path');
-const resolvers = require('./resolvers');
+import * as path from 'path'
+import * as fs from 'fs'
+import { createServer } from '@graphql-yoga/node'
+import resolvers from './resolvers.js';
 
-const server = new GraphQLServer({
-  typeDefs: path.resolve(__dirname, 'schema.graphql'),
-  resolvers: resolvers
+const server = createServer({
+  schema: {
+    typeDefs: fs.readFileSync(
+      path.resolve('src/schema.graphql'),
+      'utf-8',
+    ),
+    resolvers,
+  }
 });
 
 server.start();

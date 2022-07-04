@@ -4,7 +4,7 @@ type Question {
   resposta: String!
   regiao: String!
   imagem: String!
-  # dicas: [String]
+  dicas: [String]
 }
 
 type Query {
@@ -14,6 +14,6 @@ type Query {
 
 type Mutation {
   createQuestion(tipo: String, resposta: String!, regiao: String!, imagem: String!, dicas: [String!]): Question
-  # deleteQuestion(id: ID!): Question
-  # editQuestion(id: ID!): Question
+  deleteQuestion(id: ID!): Question
+  editQuestion(id: ID!): Question
 }

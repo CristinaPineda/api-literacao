@@ -39,7 +39,7 @@ const questions = [
   }
 ];
 
-module.exports = {
+const resolvers = {
   Query: {
     questions: () => questions,
     question: () => questions[1],
@@ -50,3 +50,5 @@ module.exports = {
     editQuestion: () => {},
   },
 };
+
+export default resolvers;
